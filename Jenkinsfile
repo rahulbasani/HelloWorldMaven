@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                withMaven(maven : 'apache-maven'){
-                        sh "mvn clean compile"
-                }
+                   sh "mvn clean compile"
             }
         }
         stage('Test'){
