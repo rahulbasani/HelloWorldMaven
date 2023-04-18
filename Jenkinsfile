@@ -19,5 +19,12 @@ pipeline {
 
             }
         }
+	stage('Package') {
+            steps {
+                   
+		   junit 'target/surefire-reports/*.xml'
+
+            }
+        }
     }
 }
